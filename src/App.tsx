@@ -4,28 +4,28 @@
 import './App.css'
 import {Link, Route, Routes} from 'react-router-dom';
 import Home from "./screens/Home.tsx";
-import About from "./screens/About.tsx";
 import Contact from "./screens/Contact.tsx";
 import {useState} from "react";
+import Buttons from "./screens/Buttons.tsx";
 
 function App() {
     const [pageTitle, setPageTitle] = useState("home");
     return (
         <>
             <header>
-                <h1>{pageTitle}</h1>
+                <h1>Dev Site: <span>{pageTitle}</span></h1>
             </header>
             <nav>
                 <ul>
                     <li><Link to="/" onClick={() => setPageTitle('home')}>Home</Link></li>
-                    <li><Link to="/about" onClick={() => setPageTitle('about')}>About</Link></li>
+                    <li><Link to="/buttons" onClick={() => setPageTitle('buttons')}>Buttons</Link></li>
                     <li><Link to="/contact" onClick={() => setPageTitle('contact')}>Contact</Link></li>
                 </ul>
             </nav>
             <main>
                 <Routes>
                     <Route path="/" element={<Home />} />
-                    <Route path="/about" element={<About />} />
+                    <Route path="/buttons" element={<Buttons />} />
                     <Route path="/contact" element={<Contact />} />
                 </Routes>
             </main>

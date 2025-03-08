@@ -1,0 +1,61 @@
+
+.button-base {
+    --button-background: transparent;
+    --button-foreground: currentColor;
+    --button-border-color: currentColor;
+    --button-border-style: solid;
+    --button-border-width: 0.1rem;
+    --button-border-radius: 0.5rem;
+    --button-padding: 1rem 1.2rem;
+    --button-text-size: 1rem;
+    --button-line-height: 1rem;
+    --button-letter-spacing: 0.1ch;
+    --button-shadow: 0.2rem 0.2rem 0.5rem #0000003f;
+    /* hover state */
+    --button-hover-background: var(--accent-color-1);
+    --button-hover-foreground: var(--primary-color-2);
+
+    &.primary {
+        --button-background: var(--primary-color-2);
+        --button-foreground: var(--primary-color-1);
+        --button-border-color: var(--primary-color-2);
+    }
+
+    &.secondary {
+        --button-background: var(--primary-color-2);
+        --button-foreground: var(--primary-color-1);
+        --button-border-color: var(--primary-color-2);
+    }
+
+    background-color: var(--button-background);
+    color: var(--button-foreground);
+    border: var(--button-border-width) var(--button-border-style) var(--button-border-color);
+    width: fit-content;
+    padding: var(--button-padding);
+    font-size: var(--button-text-size);
+    line-height: var(--button-line-height);
+    letter-spacing: var(--button-letter-spacing);
+    box-shadow: var(--button-shadow);
+    cursor: pointer;
+    border-radius: var(--button-border-radius);
+
+    &:hover,
+    &:active {
+        --button-background: var(--button-hover-background);
+        --button-foreground: var(--button-hover-foreground);
+        /*--button-border-color: var(--button-hover-background);*/
+        /*--button-shadow: 0.1rem 0.1rem 0.2rem #0000007f;*/
+        /*background-color: var(--button-hover-background);*/
+        /*color: var(--button-hover-foreground);*/
+    }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    .button-base {
+        --button-background: lightsteelblue;
+        --button-foreground: var(--primary-color-1);
+        --button-border-color: lightsteelblue;
+        --button-hover-background: var(--primary-color-2);
+        --button-hover-foreground: var(--accent-color-1);
+    }
+}
