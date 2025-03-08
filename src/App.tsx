@@ -2,16 +2,39 @@
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 import './App.css'
-import { Routes, Route, Link } from 'react-router-dom';
+import {Link, Route, Routes} from 'react-router-dom';
 import Home from "./screens/Home.tsx";
 import About from "./screens/About.tsx";
 import Contact from "./screens/Contact.tsx";
+import {useState} from "react";
 
 function App() {
+    const [pageTitle, setPageTitle] = useState("home");
+    return (
+        <>
+            <header>
+                <h1>{pageTitle}</h1>
+            </header>
+            <nav>
+                <ul>
+                    <li><Link to="/" onClick={() => setPageTitle('home')}>Home</Link></li>
+                    <li><Link to="/about" onClick={() => setPageTitle('about')}>About</Link></li>
+                    <li><Link to="/contact" onClick={() => setPageTitle('contact')}>Contact</Link></li>
+                </ul>
+            </nav>
+            <main>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/contact" element={<Contact />} />
+                </Routes>
+            </main>
+            <footer>
 
-  return (
+            </footer>
+        </>
 
-      <div>
+      /*<div>
           <nav>
               <ul>
                   <li><Link to="/">Home</Link></li>
@@ -24,7 +47,7 @@ function App() {
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
           </Routes>
-      </div>
+      </div>*/
 
   )
 
