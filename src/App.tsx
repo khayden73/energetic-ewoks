@@ -7,6 +7,7 @@ import Home from "./screens/Home.tsx";
 import Contact from "./screens/Contact.tsx";
 import {useState} from "react";
 import Buttons from "./screens/Buttons.tsx";
+import Cards from "./screens/Cards.tsx";
 
 function App() {
     const [pageTitle, setPageTitle] = useState("home");
@@ -19,6 +20,7 @@ function App() {
                 <ul>
                     <li><Link to="/" onClick={() => setPageTitle('home')}>Home</Link></li>
                     <li><Link to="/buttons" onClick={() => setPageTitle('buttons')}>Buttons</Link></li>
+                    <li><Link to="/cards" onClick={() => setPageTitle('cards')}>Cards</Link></li>
                     <li><Link to="/contact" onClick={() => setPageTitle('contact')}>Contact</Link></li>
                 </ul>
             </nav>
@@ -26,6 +28,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/buttons" element={<Buttons />} />
+                    <Route path="/cards" element={<Cards />} />
                     <Route path="/contact" element={<Contact />} />
                 </Routes>
             </main>
