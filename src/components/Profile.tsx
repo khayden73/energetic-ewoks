@@ -1,10 +1,11 @@
 import styles from "./Profile.module.css"
-import ReactComponent from "../assets/icons/smoothie-line/profile-svgrepo-com.svg";
+// import { default as ProfileIcon } from "../assets/icons/smoothie-line/profile-svgrepo-com.svg";
+import ProfileIcon from "../assets/icons/smoothie-line/profile-svgrepo-com.svg?react";
 
 function Profile() {
     return (
         <div className={styles.profileBase}>
-            <ReactComponent />
+            <ProfileIcon />
             {/*<img src={ProfileIcon} />*/}
         </div>
     )

@@ -1,6 +1,6 @@
 import * as React from "react";
 import {getChildFromChildren} from "../lib/getChildFromChildren.ts";
-import styles from "../stylesheets/Card.module.css";
+import styles from "./Tile.module.css";
 
 enum DisplayNames {
     CAPTION = "CAPTION",
@@ -23,7 +23,7 @@ function Image({ children }: { children: React.ReactNode }) {
     )
 }
 
-function Card({ children }: { children: React.ReactNode }) {
+function Tile({ children }: { children: React.ReactNode }) {
     const Caption = getChildFromChildren(children, DisplayNames.CAPTION);
     const Image = getChildFromChildren(children, DisplayNames.IMAGE);
 
@@ -38,8 +38,8 @@ function Card({ children }: { children: React.ReactNode }) {
 Caption.displayName = DisplayNames.CAPTION;
 Image.displayName = DisplayNames.IMAGE;
 
-Card.Caption = Caption;
-Card.Image = Image;
+Tile.Caption = Caption;
+Tile.Image = Image;
 
-export default Card;
+export default Tile;
 

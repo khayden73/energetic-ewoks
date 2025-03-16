@@ -1,4 +1,4 @@
-import styles from "../stylesheets/List.module.css";
+import styles from "./List.module.css";
 import * as React from "react";
 import {ListTypes} from "../lib/enums.ts";
 
