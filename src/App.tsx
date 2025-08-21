@@ -9,6 +9,7 @@ import {useState} from "react";
 import Buttons from "./screens/Buttons.tsx";
 import Cards from "./screens/Cards.tsx";
 import ShowNavBar from "./screens/ShowNavBar.tsx";
+import Modals from "./screens/Modal.tsx";
 
 function App() {
     const [pageTitle, setPageTitle] = useState("home");
@@ -23,7 +24,7 @@ function App() {
                     <li><Link to="/buttons" onClick={() => setPageTitle('buttons')}>Buttons</Link></li>
                     <li><Link to="/cards" onClick={() => setPageTitle('cards')}>Cards</Link></li>
                     <li><Link to="/navbar" onClick={() => setPageTitle('nav bar')}>Nav Bar</Link></li>
-                    <li><Link to="/contact" onClick={() => setPageTitle('contact')}>Contact</Link></li>
+                    <li><Link to="/modals" onClick={() => setPageTitle('modals')}>Modals</Link></li>
                 </ul>
             </nav>
             <main>
@@ -33,6 +34,7 @@ function App() {
                     <Route path="/cards" element={<Cards />} />
                     <Route path="/navbar" element={<ShowNavBar />} />
                     <Route path="/contact" element={<Contact />} />
+                    <Route path="/modals" element={<Modals />} />
                 </Routes>
             </main>
             <footer>
