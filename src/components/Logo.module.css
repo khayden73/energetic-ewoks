@@ -1,0 +1,21 @@
+
+
+.logo-container-base {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /*object-position: center;*/
+    /*height: 100%;*/
+    max-width: 50px;
+    width: auto;
+    /*border: 2px dotted red;*/
+    margin: 0;
+    padding: 0;
+
+
+    img {
+        width: 100%;
+        object-fit: contain;
+    }
+}
