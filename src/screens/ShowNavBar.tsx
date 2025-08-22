@@ -3,7 +3,7 @@ import NavBar from "../components/NavBar.tsx";
 function ShowNavBar () {
     return (
         <div>
-            <h2>This is the navbar</h2>
+            <h2>This is the navbar (work in progress)</h2>
             <NavBar />
         </div>
     )

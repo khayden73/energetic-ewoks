@@ -5,11 +5,11 @@
     /* Container */
     container-type: inline-size;
     /*container-name: tile-grid-container;*/
-    outline: 2px dashed red;
+    /*outline: 2px dashed red;*/
     padding: 3rem;
 
     @container (min-width: 300px) {
-        outline: 2px dashed green;
+        /*outline: 2px dashed green;*/
         --max-columns: 3;
     }
 
@@ -40,7 +40,7 @@
             background-color: deeppink;
 
             @container (min-width: 300px) {
-                background-color: lawngreen;
+                background-color: white;
                 /*grid-column: span var(--column-span);*/
                 /*grid-row: span var(--row-span);*/
             }
