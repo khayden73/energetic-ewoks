@@ -9,7 +9,7 @@ import {useState} from "react";
 import Buttons from "./screens/Buttons.tsx";
 import Cards from "./screens/Cards.tsx";
 import ShowNavBar from "./screens/ShowNavBar.tsx";
-import Modals from "./screens/Modal.tsx";
+import Modals from "./screens/Modals.tsx";
 
 function App() {
     const [pageTitle, setPageTitle] = useState("home");
