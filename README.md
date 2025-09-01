@@ -1,54 +1,29 @@
-# React + TypeScript + Vite
+# Energetic Ewoks
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
 
-Currently, two official plugins are available:
+An experiment and learning tool. I wanted to start a project from scratch using Vite and have always enjoyed building UI components. The idea was to build a small, flexible component library that I can use in personal projects. It's very basic and rudimentary at this point, but will grow.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## tech stack
 
-## Expanding the ESLint configuration
+React + TypeScript + Vite
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+I love learning new things, and getting to know vite has been fun.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+Yes, I actually code for fun.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## the project
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+I don't know yet if this is something I would open source as something for people to actually use. Perhaps it would help someone else on their learning path. I don't recommend using it in a production site, but if you're a tinkerer, like me, and you just want to fork it and figure some stuff out, have at it.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## CSS
+
+I'm a big CSS nerd, so I want to build out the styles myself, instead of using something off the shelf like Tailwind. 
+
+## TODO
+
+See the TODO list readme
+
+## Vite
+
+see the VITE_README file, which was the default README when first creating the project
