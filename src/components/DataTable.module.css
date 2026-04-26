@@ -1,0 +1,42 @@
+
+.data-table-base {
+    --border-radius: 0px;
+    --header-bg-color: #ccccff;
+    --row-bg-color-odd: #ffffff;
+    --row-bg-color-even: #ddddff;
+    width: 100%;
+}
+
+.data-table-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding: 1rem;
+
+    /*background-color: pink;*/
+    /*min-height: 200px;*/
+}
+
+.data-table-header {
+    font-weight: 700;
+    font-size: 1.2rem;
+    background-color: var(--header-bg-color);
+    text-align: left;
+
+    th {
+        padding: 0.3rem;
+    }
+}
+
+.data-table-row {
+    background-color: var(--row-bg-color-odd);
+
+    td {
+        padding: 0.3rem;
+    }
+
+    &:nth-child(even) {
+        background-color: var(--row-bg-color-even);
+    }
+}

@@ -1,48 +1,75 @@
 // import { useState } from 'react'
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
-import './App.css'
-import {Link, Route, Routes} from 'react-router-dom';
+import "./App.css";
+import { Link, Route, Routes } from "react-router-dom";
 import Home from "./screens/Home.tsx";
 import Contact from "./screens/Contact.tsx";
-import {useState} from "react";
+import { useState } from "react";
 import Buttons from "./screens/Buttons.tsx";
 import Cards from "./screens/Cards.tsx";
 import ShowNavBar from "./screens/ShowNavBar.tsx";
 import Modals from "./screens/Modals.tsx";
+import Tables from "./screens/Table.tsx";
 
 function App() {
-    const [pageTitle, setPageTitle] = useState("home");
-    return (
-        <>
-            <header>
-                <h1>Dev Site: <span>{pageTitle}</span></h1>
-            </header>
-            <nav>
-                <ul>
-                    <li><Link to="/" onClick={() => setPageTitle('home')}>Home</Link></li>
-                    <li><Link to="/buttons" onClick={() => setPageTitle('buttons')}>Buttons</Link></li>
-                    <li><Link to="/cards" onClick={() => setPageTitle('cards')}>Cards</Link></li>
-                    <li><Link to="/navbar" onClick={() => setPageTitle('nav bar')}>Nav Bar</Link></li>
-                    <li><Link to="/modals" onClick={() => setPageTitle('modals')}>Modals</Link></li>
-                </ul>
-            </nav>
-            <main>
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/buttons" element={<Buttons />} />
-                    <Route path="/cards" element={<Cards />} />
-                    <Route path="/navbar" element={<ShowNavBar />} />
-                    <Route path="/contact" element={<Contact />} />
-                    <Route path="/modals" element={<Modals />} />
-                </Routes>
-            </main>
-            <footer>
+  const [pageTitle, setPageTitle] = useState("home");
+  return (
+    <>
+      <header>
+        <h1>
+          Dev Site: <span>{pageTitle}</span>
+        </h1>
+      </header>
+      <nav>
+        <ul>
+          <li>
+            <Link to="/" onClick={() => setPageTitle("home")}>
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to="/buttons" onClick={() => setPageTitle("buttons")}>
+              Buttons
+            </Link>
+          </li>
+          <li>
+            <Link to="/cards" onClick={() => setPageTitle("cards")}>
+              Cards
+            </Link>
+          </li>
+          <li>
+            <Link to="/navbar" onClick={() => setPageTitle("nav bar")}>
+              Nav Bar
+            </Link>
+          </li>
+          <li>
+            <Link to="/modals" onClick={() => setPageTitle("modals")}>
+              Modals
+            </Link>
+          </li>
+          <li>
+            <Link to="/table" onClick={() => setPageTitle("Data Table")}>
+              Data Table
+            </Link>
+          </li>
+        </ul>
+      </nav>
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/buttons" element={<Buttons />} />
+          <Route path="/cards" element={<Cards />} />
+          <Route path="/navbar" element={<ShowNavBar />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/modals" element={<Modals />} />
+          <Route path="/table" element={<Tables />} />
+        </Routes>
+      </main>
+      <footer></footer>
+    </>
 
-            </footer>
-        </>
-
-      /*<div>
+    /*<div>
           <nav>
               <ul>
                   <li><Link to="/">Home</Link></li>
@@ -56,11 +83,9 @@ function App() {
               <Route path="/contact" element={<Contact />} />
           </Routes>
       </div>*/
+  );
 
-  )
-
-
-    // const [count, setCount] = useState(0)
+  // const [count, setCount] = useState(0)
 
   /*return (
     <>
@@ -88,4 +113,4 @@ function App() {
   )*/
 }
 
-export default App
+export default App;

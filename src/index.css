@@ -55,6 +55,15 @@ a {
   box-sizing: border-box;
 }
 
+#root {
+  display: grid;
+  grid-template-columns: minmax(100px, 150px);
+
+  header {
+    grid-column: span 2;
+  }
+}
+
 #root > header h1 {
   text-transform: uppercase;
   span {
